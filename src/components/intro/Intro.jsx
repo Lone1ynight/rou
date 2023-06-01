@@ -1,5 +1,5 @@
 import React from "react";
-import introPhoto from '../img/intro/photo.png'
+import introPhoto from '../../img/intro/photo.png'
 export const Intro = () => {
     return (
         <div className="intro">
