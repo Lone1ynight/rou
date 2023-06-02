@@ -48,7 +48,7 @@ export const Testimonial = () => {
                         <Slider {...settings}>
                             {
                                 data.map(item =>
-                                    <div className="testimonial_slider_item">
+                                    <div className="testimonial_slider_item" key={item.name}>
 
                                         <div className="testimonial__block_title">{item.title}</div>
                                         <div className="testimonial__block_text ">

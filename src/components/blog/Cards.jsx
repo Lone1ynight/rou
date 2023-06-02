@@ -26,7 +26,7 @@ export const Cards = ({dataCards}) => {
     }
 
     return dataCards.map(card =>
-        <div className="blog__item">
+        <div className="blog__item" key={card.name}>
             <div className={`blog__item_subtitle ${card.colorClassname}`}>{card.subtitle}</div>
             <div className="blog__item_title">{card.title}</div>
             <div className="blog__item_text">

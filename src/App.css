@@ -2420,6 +2420,7 @@ p {
   color: #9f9fa0;
 }
 .footer__column {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   margin-left: 85px;

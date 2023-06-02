@@ -1,7 +1,7 @@
 import React from "react";
 
 export const Persons = ({persons}) => persons.map(person =>
-    <div className="team__item">
+    <div className="team__item" key={person.name}>
         <div className="team__item_photo">
             <img src={person.img} alt=""/>
         </div>

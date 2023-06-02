@@ -1,29 +1,29 @@
 import React from "react";
 import {faPhone, faEnvelope, faLocationDot} from "@fortawesome/free-solid-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Contacts} from "./Contacts";
 import {Form} from "./Form";
 
-export const Contact = () => {
-    const contacts = [
-        {
-            img: faPhone,
-            name: 'Phone',
-            value: '0123-4567-8910'
-        },
-        {
-            img: faEnvelope,
-            name: 'Email',
-            value: 'hello@rainydesign.com'
-        },
-        {
-            img: faLocationDot,
-            name: 'Address',
-            value: '20, Bordeshi, Amin Bazar\n' +
-                'Savar, Dhaka'
-        },
+export const contacts = [
+    {
+        img: faPhone,
+        name: 'Phone',
+        value: '0123-4567-8910'
+    },
+    {
+        img: faEnvelope,
+        name: 'Email',
+        value: 'hello@rainydesign.com'
+    },
+    {
+        img: faLocationDot,
+        name: 'Address',
+        value: '20, Bordeshi, Amin Bazar\n' +
+            'Savar, Dhaka'
+    },
 
-    ]
+]
+
+export const Contact = () => {
     return (
         <div className="contact" id='contact'>
             <div className="contact__inner">
