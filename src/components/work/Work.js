@@ -30,7 +30,7 @@ export const Work = () => {
     ]
 
     return (
-        <div className="work">
+        <div className="work" id='work'>
             <div className="work__inner">
 
                 <div className="work__subtitle _anim-items _anim-no-hide _active">Our Projects</div>

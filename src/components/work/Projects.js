@@ -13,8 +13,6 @@ export const Projects = ({dataProjects}) => {
         }
     }
 
-    console.log(modalProject)
-
     return (
         <>
             {

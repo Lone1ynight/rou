@@ -1634,16 +1634,26 @@ p {
   margin-right: 10px;
 }
 .testimonial_slider .slick-dots li.slick-active button {
+  color: #c04ae2;
   width: 30px;
 }
+
+.testimonial_slider .slick-dots li.slick-active button:before {
+  color: #c04ae2;
+}
+
 .testimonial_slider .slick-dots button {
   font-size: 0;
   width: 10px;
   height: 10px;
-  background-color: #c04ae2;
+  color: #c04ae2;
   border-radius: 8px;
   border-width: 0px;
   transition: all 0.2s linear;
+}
+
+.testimonial_slider .slick-dots button:before {
+  color: #c04ae2;
 }
 @media only screen and (min-width: 995px) and (max-width: 1260px) {
   .testimonial__inner {

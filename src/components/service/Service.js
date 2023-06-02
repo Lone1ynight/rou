@@ -52,7 +52,7 @@ export const Service = () => {
         }
     ]
     return (
-        <div className="service">
+        <div className="service" id='service'>
 
             <div className="container">
                 <div className="service__inner">
