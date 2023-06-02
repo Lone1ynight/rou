@@ -1,7 +1,7 @@
 import React from "react";
 
 export const Cards = ({dataCards}) =>
-        dataCards. map(item =>
+        dataCards.map(item =>
             <div className="about__block_item" key={item.title}>
                 <div className="about__block_item_icon">
                     <img src={item.img} alt=""/>
