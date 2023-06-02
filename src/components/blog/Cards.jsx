@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faHeart} from "@fortawesome/free-solid-svg-icons";
 
@@ -6,27 +6,24 @@ import {faHeart} from "@fortawesome/free-solid-svg-icons";
 export const Cards = ({dataCards}) => {
     const [liked, setLiked] = useState(false)
 
-    const onClickLike = (name) => {
-        dataCards.forEach((card, index) => {
-            if(card.name === name) {
-                if (!liked) {
+    const onClickLike = (subtitle, like) => {
+        dataCards.forEach((card) => {
+            if(card.subtitle === subtitle) {
+                if (!like) {
                     card.likes +=1
                     card.liked = true
-                    setLiked(true)
+                    setLiked(prevState => !prevState)
                 } else {
                     card.likes -=1
                     card.liked = false
-                    setLiked(false)
+                    setLiked(prevState => !prevState)
                 }
-                dataCards[index] = card
-                return [...dataCards]
             }
-
         })
     }
 
     return dataCards.map(card =>
-        <div className="blog__item" key={card.name}>
+        <div className="blog__item" key={card.name }>
             <div className={`blog__item_subtitle ${card.colorClassname}`}>{card.subtitle}</div>
             <div className="blog__item_title">{card.title}</div>
             <div className="blog__item_text">
@@ -42,7 +39,7 @@ export const Cards = ({dataCards}) => {
 
                 <div className="blog__item_add_block_right">
                     <i className="fa fa-heart-o" aria-hidden="true"
-                       onClick={() => onClickLike(card.name)}
+                       onClick={() => onClickLike(card.subtitle, card.liked)}
                        style={{color: `${card?.liked ? 'red' : ''}`}}
                     >
                         <FontAwesomeIcon icon={faHeart} />
